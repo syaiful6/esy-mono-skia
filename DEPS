@@ -20,7 +20,7 @@ deps = {
   "third_party/externals/dng_sdk"         : "https://android.googlesource.com/platform/external/dng_sdk.git@c8d0c9b1d16bfda56f15165d39e0ffa360a11123",
   "third_party/externals/egl-registry"    : "https://skia.googlesource.com/external/github.com/KhronosGroup/EGL-Registry@a0bca08de07c7d7651047bedc0b653cfaaa4f2ae",
   "third_party/externals/expat"           : "https://chromium.googlesource.com/external/github.com/libexpat/libexpat.git@3bab6c09bbe8bf42d84b81563ddbcf4cca4be838",
-  "third_party/externals/freetype"        : "https://skia.googlesource.com/third_party/freetype2.git@40c5681ab92e7db1298273ccf3c816e6a1498260",
+  "third_party/externals/freetype"        : "https://chromium.googlesource.com/chromium/src/third_party/freetype2.git@d857bd535b6c7e877f262a9b61ed21ee11b35dab",
   "third_party/externals/harfbuzz"        : "https://github.com/harfbuzz/harfbuzz.git@63e15eac4f443fa53565d1e4fb9611cdd7814f28",
   "third_party/externals/icu"             : "https://chromium.googlesource.com/chromium/deps/icu.git@dbd3825b31041d782c5b504c59dcfb5ac7dda08c",
   "third_party/externals/imgui"           : "https://skia.googlesource.com/external/github.com/ocornut/imgui.git@9418dcb69355558f70de260483424412c5ca2fce",

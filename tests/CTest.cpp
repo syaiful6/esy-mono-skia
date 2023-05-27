@@ -87,9 +87,6 @@ static void test_c(skiatest::Reporter* reporter) {
     sk_canvas_t* canvas = sk_surface_get_canvas(surface);
     REPORTER_ASSERT(reporter, canvas != nullptr);
 
-    sk_paint_t* paint = sk_paint_new();
-    REPORTER_ASSERT(reporter, paint != nullptr);
-
     sk_canvas_draw_paint(canvas, paint);
     REPORTER_ASSERT(reporter, 0xFF000000 == pixel[0]);
 

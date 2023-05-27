@@ -78,6 +78,7 @@ is_maccatalyst = current_os == "maccatalyst"
 is_linux = current_os == "linux" || current_os == "tizen"
 is_mac = current_os == "mac"
 is_win = current_os == "win" || current_os == "winrt"
+is_wasm = current_os == "wasm"
 is_winrt = current_os == "winrt"
 is_tizen = current_os == "tizen"
 

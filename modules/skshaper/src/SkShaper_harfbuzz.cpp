@@ -386,21 +386,17 @@ public:
         , fCurrent(utf8), fBegin(utf8), fEnd(fCurrent + utf8Bytes)
         , fCurrentScript(HB_SCRIPT_UNKNOWN)
     {}
-    hb_script_t hb_script_from_icu(SkUnichar u) {
-        SkScriptIterator::ScriptID scriptId;
-        if (!fScript->getScript(u, &scriptId)) {
-            return HB_SCRIPT_UNKNOWN;
-        }
-        return hb_icu_script_to_script((UScriptCode)scriptId);
+hb_script_t hb_script_for_unichar(SkUnichar u) {
+         return hb_unicode_script(hb_unicode_funcs_get_default(), u);
     }
     void consume() override {
         SkASSERT(fCurrent < fEnd);
         SkUnichar u = utf8_next(&fCurrent, fEnd);
-        fCurrentScript = hb_script_from_icu(u);
+        fCurrentScript = hb_script_for_unichar(u);
         while (fCurrent < fEnd) {
             const char* prev = fCurrent;
             u = utf8_next(&fCurrent, fEnd);
-            const hb_script_t script = hb_script_from_icu(u);
+            const hb_script_t script = hb_script_for_unichar(u);
             if (script != fCurrentScript) {
                 if (fCurrentScript == HB_SCRIPT_INHERITED || fCurrentScript == HB_SCRIPT_COMMON) {
                     fCurrentScript = script;
