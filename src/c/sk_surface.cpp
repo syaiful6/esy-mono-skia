@@ -93,6 +93,14 @@ const sk_surfaceprops_t* sk_surface_get_props(sk_surface_t* surface) {
     return ToSurfaceProps(&AsSurface(surface)->props());
 }
 
+int sk_surface_get_width(sk_surface_t* surface) {
+    return AsSurface(surface)->width();
+}
+
+int sk_surface_get_height(sk_surface_t* surface) {
+    return AsSurface(surface)->height();
+}
+
 void sk_surface_flush(sk_surface_t* surface) {
     AsSurface(surface)->flush();
 }

@@ -50,3 +50,4 @@ node_modules
 tools/lottiecap/filmstrip.png
 
 bazel-*
+_esy/

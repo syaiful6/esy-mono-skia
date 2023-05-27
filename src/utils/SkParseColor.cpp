@@ -8,6 +8,12 @@
 
 #include "include/utils/SkParse.h"
 
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <iterator>
+#include <string>
+
 static constexpr const char* gColorNames[] = {
     "aliceblue",
     "antiquewhite",

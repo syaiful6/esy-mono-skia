@@ -101,6 +101,14 @@ sk_data_t* sk_typeface_copy_table_data(const sk_typeface_t* typeface, sk_font_ta
     return ToData(AsTypeface(typeface)->copyTableData(tag).release());
 }
 
+uint32_t sk_typeface_get_unique_id(sk_typeface_t* typeface) {
+    return AsTypeface(typeface)->uniqueID();
+}
+
+bool sk_typeface_equal(sk_typeface_t* typeface_a, sk_typeface_t* typeface_b) {
+    return SkTypeface::Equal(AsTypeface(typeface_a), AsTypeface(typeface_b));
+}
+
 int sk_typeface_get_units_per_em(const sk_typeface_t* typeface) {
     return AsTypeface(typeface)->getUnitsPerEm();
 }

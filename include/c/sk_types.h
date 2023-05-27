@@ -141,28 +141,28 @@ typedef enum {
 
 typedef struct sk_surfaceprops_t sk_surfaceprops_t;
 
-typedef struct {
+typedef struct sk_point_t {
     float   x;
     float   y;
 } sk_point_t;
 
 typedef sk_point_t sk_vector_t;
 
-typedef struct {
+typedef struct sk_irect_t {
     int32_t left;
     int32_t top;
     int32_t right;
     int32_t bottom;
 } sk_irect_t;
 
-typedef struct {
+typedef struct sk_rect_t {
     float   left;
     float   top;
     float   right;
     float   bottom;
 } sk_rect_t;
 
-typedef struct {
+typedef struct sk_matrix_t {
     float scaleX, skewX, transX;
     float skewY, scaleY, transY;
     float persp0, persp1, persp2;
@@ -311,7 +311,7 @@ typedef struct {
     int32_t   h;
 } sk_isize_t;
 
-typedef struct {
+typedef struct sk_fontmetrics_t {
     uint32_t fFlags;
     float    fTop;
     float    fAscent;
@@ -666,13 +666,13 @@ typedef struct gr_glinterface_t gr_glinterface_t;
 typedef void (*gr_gl_func_ptr)(void);
 typedef gr_gl_func_ptr (*gr_gl_get_proc)(void* ctx, const char* name);
 
-typedef struct {
+typedef struct gr_gl_textureinfo_t {
     unsigned int fTarget;
     unsigned int fID;
     unsigned int fFormat;
 } gr_gl_textureinfo_t;
 
-typedef struct {
+typedef struct gr_gl_framebufferinfo_t {
     unsigned int fFBOID;
     unsigned int fFormat;
 } gr_gl_framebufferinfo_t;
@@ -841,7 +841,7 @@ typedef struct {
     int                 fEncodingQuality;
 } sk_document_pdf_metadata_t;
 
-typedef struct {
+typedef struct sk_imageinfo_t {
     sk_colorspace_t* colorspace;
     int32_t          width;
     int32_t          height;
@@ -867,6 +867,7 @@ typedef struct sk_xmlstreamwriter_t sk_xmlstreamwriter_t;
 typedef struct sk_xmlwriter_t sk_xmlwriter_t;
 
 typedef struct sk_svgcanvas_t sk_svgcanvas_t;
+typedef struct sk_svgdom_t sk_svgdom_t;
 
 typedef struct sk_3dview_t sk_3dview_t;
 
