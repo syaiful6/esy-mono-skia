@@ -1,0 +1,6 @@
+#ifndef sk_revery_DEFINED
+#define sk_revery_DEFINED
+
+SK_C_PLUS_PLUS_BEGIN_GUARD
+typedef struct sk_svgdom_t sk_svgdom_t;
+SK_C_PLUS_PLUS_END_GUARD

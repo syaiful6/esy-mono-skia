@@ -3075,3 +3075,48 @@ if (is_ios && skia_enable_skottie && !skia_enable_flutter_defines) {
 }
 
 # SkiaSharp + HarfBuzzSharp
+skiasharp_build("SkiaSharp") {
+  public_configs = [ ":skia_public" ]
+  configs += skia_library_configs
+
+  defines = [ "SKIA_C_DLL" ]
+
+  deps = [
+    ":skia",
+    "modules/skottie",
+  ]
+
+  sources = [
+    "src/xamarin/sk_compatpaint.cpp",
+    "src/xamarin/sk_manageddrawable.cpp",
+    "src/xamarin/sk_managedstream.cpp",
+    "src/xamarin/sk_managedtracememorydump.cpp",
+    "src/xamarin/sk_xamarin.cpp",
+    "src/xamarin/SkiaKeeper.c",
+    "src/xamarin/SkCompatPaint.cpp",
+    "src/xamarin/SkManagedDrawable.cpp",
+    "src/xamarin/SkManagedStream.cpp",
+    "src/xamarin/SkManagedTraceMemoryDump.cpp",
+    "src/xamarin/WinRTCompat.cpp",
+  ]
+
+  libs = []
+}
+
+skiasharp_build("skia_revery") {
+  public_configs = [ ":skia_public" ]
+  configs += skia_library_configs
+
+  defines = [ "SKIA_C_DLL" ]
+
+  deps = [
+    ":skia",
+    "modules/svg",
+  ]
+
+  sources = [
+    "src/revery/sk_revery_svgdom.cpp"
+  ]
+
+  libs = []
+}
