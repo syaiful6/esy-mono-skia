@@ -3103,11 +3103,9 @@ skiasharp_build("SkiaSharp") {
   libs = []
 }
 
-skiasharp_build("skia_revery") {
+component("skia_revery") {
   public_configs = [ ":skia_public" ]
   configs += skia_library_configs
-
-  defines = [ "SKIA_C_DLL" ]
 
   deps = [
     ":skia",

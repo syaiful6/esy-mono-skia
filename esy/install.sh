@@ -16,11 +16,12 @@ then
     cp $cur__target_dir/out/Shared/skia.dll $cur__bin
     cp $cur__target_dir/out/Static/libsvg.a $cur__lib
     cp $cur__target_dir/out/Shared/svg.dll $cur__bin
-    cp $cur__target_dir/out/Static/skia_revery.dd $cur__bin
+    cp $cur__target_dir/out/Static/skia_revery.a $cur__lib
+    cp $cur__target_dir/out/Static/skia_revery.dll $cur__bin
 else
     cp $cur__target_dir/out/Static/libskia.a $cur__lib
     cp $cur__target_dir/out/Static/libsvg.a $cur__lib
-    cp $cur__target_dir/out/Static/libskia_revery.so $cur__lib
+    cp $cur__target_dir/out/Static/libskia_revery.a $cur__lib
 fi
 
 # Create pkg-config file skia.pc
