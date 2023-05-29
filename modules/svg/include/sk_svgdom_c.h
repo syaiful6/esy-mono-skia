@@ -1,5 +1,5 @@
-#ifndef sk_svg_DEFINED
-#define sk_svg_DEFINED
+#ifndef sk_svgdom_c_DEFINED
+#define sk_svgdom_c_DEFINED
 
 #include "include/c/sk_types.h"
 SK_C_PLUS_PLUS_BEGIN_GUARD
