@@ -6,8 +6,8 @@ OS=$1
 mkdir -p $cur__install/include
 cp -a $cur__root/include/. $cur__install/include/
 
-mkdir -p $cur__install/include/components/svg/include
-cp $cur__root/components/svg/include/*.h  $cur__install/include/components/svg/include
+mkdir -p $cur__install/include/modules/svg/include
+cp -a $cur__root/modules/svg/include/.  $cur__install/include/modules/svg/include/
 
 
 if [[ $OS == 'windows' ]]
@@ -16,12 +16,9 @@ then
     cp $cur__target_dir/out/Shared/skia.dll $cur__bin
     cp $cur__target_dir/out/Static/libsvg.a $cur__lib
     cp $cur__target_dir/out/Shared/svg.dll $cur__bin
-    cp $cur__target_dir/out/Static/skia_revery.a $cur__lib
-    cp $cur__target_dir/out/Static/skia_revery.dll $cur__bin
 else
     cp $cur__target_dir/out/Static/libskia.a $cur__lib
     cp $cur__target_dir/out/Static/libsvg.a $cur__lib
-    cp $cur__target_dir/out/Static/libskia_revery.a $cur__lib
 fi
 
 # Create pkg-config file skia.pc
