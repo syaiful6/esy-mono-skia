@@ -2,8 +2,6 @@
 #define sk_revery_svg_DEFINED
 
 #include "include/c/sk_types.h"
-#include "include/revery/sk_revery.h"
-
 SK_C_PLUS_PLUS_BEGIN_GUARD
 
 SK_C_API void sk_revery_svgdom_render(sk_svgdom_t *svgdom, sk_canvas_t *canvas);

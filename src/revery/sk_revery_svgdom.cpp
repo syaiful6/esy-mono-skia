@@ -1,6 +1,7 @@
 #include "include/svg/SkSVGCanvas.h"
 
 #include "include/c/sk_svg.h"
+#include "include/revery/sk_revery_svgdom.h"
 #include "src/c/sk_types_priv.h"
 #include "modules/svg/include/SkSVGDOM.h"
 #include "modules/svg/include/SkSVGNode.h"
