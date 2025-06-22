@@ -2123,38 +2123,6 @@ if (skia_enable_tools) {
     ]
   }
 
-  if (!is_ios && target_cpu != "wasm" && !(is_win && target_cpu == "arm64")) {
-    test_app("skiaserve") {
-      sources = [
-        "tools/skiaserve/Request.cpp",
-        "tools/skiaserve/Response.cpp",
-        "tools/skiaserve/skiaserve.cpp",
-        "tools/skiaserve/urlhandlers/BreakHandler.cpp",
-        "tools/skiaserve/urlhandlers/ClipAlphaHandler.cpp",
-        "tools/skiaserve/urlhandlers/CmdHandler.cpp",
-        "tools/skiaserve/urlhandlers/ColorModeHandler.cpp",
-        "tools/skiaserve/urlhandlers/DataHandler.cpp",
-        "tools/skiaserve/urlhandlers/DownloadHandler.cpp",
-        "tools/skiaserve/urlhandlers/EnableGPUHandler.cpp",
-        "tools/skiaserve/urlhandlers/ImgHandler.cpp",
-        "tools/skiaserve/urlhandlers/InfoHandler.cpp",
-        "tools/skiaserve/urlhandlers/OpBoundsHandler.cpp",
-        "tools/skiaserve/urlhandlers/OpsHandler.cpp",
-        "tools/skiaserve/urlhandlers/OverdrawHandler.cpp",
-        "tools/skiaserve/urlhandlers/PostHandler.cpp",
-        "tools/skiaserve/urlhandlers/QuitHandler.cpp",
-        "tools/skiaserve/urlhandlers/RootHandler.cpp",
-      ]
-      deps = [
-        ":flags",
-        ":gpu_tool_utils",
-        ":skia",
-        ":tool_utils",
-        "//third_party/libmicrohttpd",
-      ]
-    }
-  }
-
   test_app("fuzz") {
     sources = [
       "fuzz/Fuzz.cpp",
@@ -2585,18 +2553,6 @@ if (skia_enable_tools) {
         ":sk_app",
         ":skia",
         ":tool_utils",
-      ]
-    }
-  }
-
-  if (skia_use_gl && (is_linux || is_mac || is_ios)) {
-    test_app("SkiaSDLExample") {
-      sources = [ "example/SkiaSDLExample.cpp" ]
-      libs = []
-      deps = [
-        ":gpu_tool_utils",
-        ":skia",
-        "//third_party/libsdl",
       ]
     }
   }
